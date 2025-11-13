@@ -1,53 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Seller CRM</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Social Seller CRM – Dashboard</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./styles.css" />
-</head>
+    <!-- CSS NHÚNG THẲNG VÀO ĐÂY, KHÔNG CẦN styles.css NỮA -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-<body>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f5f7;
+        color: #222;
+      }
 
+      /* HEADER */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+        background: #111827;
+        color: #f9fafb;
+        border-bottom: 1px solid #1f2937;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      header .logo span.icon {
+        font-size: 24px;
+      }
+
+      header nav a {
+        margin-left: 16px;
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      header nav a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+
+      header nav a.active {
+        color: #38bdf8;
+      }
+
+      /* LAYOUT CHUNG */
+      #app {
+        display: flex;
+        height: calc(100vh - 56px); /* trừ chiều cao header khoảng 56px */
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        width: 220px;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 16px;
+        border-right: 1px solid #1f2937;
+      }
+
+      .sidebar h2 {
+        font-size: 16px;
+        margin: 0 0 12px 0;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .sidebar li {
+        margin-bottom: 8px;
+      }
+
+      .sidebar a {
+        text-decoration: none;
+        color: #e5e7eb;
+        font-size: 14px;
+      }
+
+      .sidebar a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+
+      /* MAIN CONTENT */
+      .main {
+        flex: 1;
+        padding: 24px;
+        overflow-y: auto;
+      }
+
+      .main h1 {
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .muted {
+        color: #6b7280;
+      }
+
+      /* THẺ THỐNG KÊ DASHBOARD */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+        margin-top: 16px;
+        margin-bottom: 24px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 12px 14px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+      }
+
+      .card-title {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 4px;
+      }
+
+      .card-value {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* INLINE JS CHECK */
+      .inline-ok {
+        margin-top: 12px;
+        font-size: 14px;
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
     <!-- HEADER -->
-    <header id="header">
-        <h1>📒 Social Seller CRM</h1>
-        <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Customers</a>
-            <a href="#">Orders</a>
-            <a href="#">Products</a>
-            <a href="#">Settings</a>
-        </nav>
+    <header>
+      <div class="logo">
+        <span class="icon">📒</span>
+        <span>Social Seller CRM</span>
+      </div>
+      <nav>
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Customers</a>
+        <a href="#">Orders</a>
+        <a href="#">Products</a>
+        <a href="#">Settings</a>
+      </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="content">
-        <h2>Dashboard</h2>
-        <p>Welcome to your CRM system.</p>
+    <!-- APP LAYOUT -->
+    <div id="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2>CRM Menu</h2>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </aside>
 
-        <div class="stats">
-            <p>Total Customers: 0</p>
-            <p>Total Orders: 0</p>
-            <p>Revenue: 0₫</p>
-            <p>Products: 0</p>
-        </div>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <h1>Dashboard</h1>
+        <p class="muted">Welcome to your CRM system.</p>
 
-        <p id="inline-status"></p>
-    </main>
+        <section class="stats">
+          <div class="card">
+            <div class="card-title">Total Customers</div>
+            <div class="card-value">0</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Total Orders</div>
+            <div class="card-value">0</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Revenue</div>
+            <div class="card-value">0₫</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Products</div>
+            <div class="card-value">0</div>
+          </div>
+        </section>
 
-    <!-- JS -->
-    <script src="./app.js"></script>
+        <!-- chỗ này về sau JS sẽ thay nội dung theo Supabase -->
+        <div id="content-area"></div>
 
-    <!-- INLINE TEST -->
-    <script>
-        const test = document.getElementById("inline-status");
-        test.textContent = "☑ Inline JS đang chạy OK";
-        test.style.color = "green";
-        test.style.fontWeight = "bold";
-    </script>
+        <p class="inline-ok">☑ Inline JS đang chạy OK</p>
+      </main>
+    </div>
 
-</body>
+    <!-- SAU NÀY app.js sẽ gắn vào đây, để y như cũ -->
+    <script type="module" src="./app.js"></script>
+  </body>
 </html>

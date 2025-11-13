@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Seller CRM</title>
+  <title>Social Seller CRM – Dashboard</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
   <div id="app">
-
+    
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="logo">📒 Social Seller CRM</div>
@@ -35,18 +36,20 @@
         <div class="card">Revenue: 0₫</div>
         <div class="card">Products: 0</div>
       </div>
-    </main>
 
+      <!-- TEST INLINE JS -->
+      <p id="js-status"></p>
+
+      <script>
+        const p = document.getElementById("js-status");
+        p.textContent = "☑ Inline JS đang chạy OK";
+        p.style.color = "green";
+        p.style.fontWeight = "bold";
+      </script>
+    </main>
   </div>
 
-  <!-- TEST inline JS -->
-  <script>
-    const p = document.createElement("p");
-    p.textContent = "☑ Inline JS chạy OK";
-    p.style.color = "green";
-    p.style.fontWeight = "bold";
-    document.body.appendChild(p);
-  </script>
-
+  <!-- JS APP -->
+  <script src="app.js"></script>
 </body>
 </html>

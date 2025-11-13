@@ -11,6 +11,15 @@
 
     <!-- gọi app.js -->
     <script type="module" src="app.js"></script>
+    <!-- TEST inline JS -->
+  <script>
+    console.log("INLINE JS ĐANG CHẠY");
+    const p = document.createElement("p");
+    p.textContent = "✅ Inline JS đã chạy";
+    p.style.color = "green";
+    p.style.fontWeight = "bold";
+    document.body.appendChild(p);
+  </script>
   </body>
 </html>
 

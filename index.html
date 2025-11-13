@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Seller CRM – Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Seller CRM – Dashboard</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- LINK CSS CHUẨN 100% -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div id="app">
-    
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">📒 Social Seller CRM</div>
 
-      <nav>
-        <a href="#" class="active">Dashboard</a>
-        <a href="#">Customers</a>
-        <a href="#">Orders</a>
-        <a href="#">Products</a>
-        <a href="#">Settings</a>
-      </nav>
-    </aside>
+    <!-- Logo + menu -->
+    <header>
+        <div class="logo">📒 Social Seller CRM</div>
+        <nav class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Customers</a>
+            <a href="#">Orders</a>
+            <a href="#">Products</a>
+            <a href="#">Settings</a>
+        </nav>
+    </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
-      <h1>Dashboard</h1>
-      <p>Welcome to your CRM system.</p>
+    <!-- Nội dung chính -->
+    <main>
+        <h1>Dashboard</h1>
+        <p>Welcome to your CRM system.</p>
 
-      <div class="grid">
-        <div class="card">Total Customers: 0</div>
-        <div class="card">Total Orders: 0</div>
-        <div class="card">Revenue: 0₫</div>
-        <div class="card">Products: 0</div>
-      </div>
+        <div class="stats">
+            <p>Total Customers: 0</p>
+            <p>Total Orders: 0</p>
+            <p>Revenue: 0đ</p>
+            <p>Products: 0</p>
+        </div>
 
-      <!-- TEST INLINE JS -->
-      <p id="js-status"></p>
+        <p id="js-test"></p>
+    </main>
 
-      <script>
-        const p = document.getElementById("js-status");
-        p.textContent = "☑ Inline JS đang chạy OK";
+    <!-- Gọi app.js -->
+    <script src="app.js"></script>
+
+    <!-- Test inline JS -->
+    <script>
+        const p = document.getElementById("js-test");
+        p.textContent = "☑ Inline JS chạy OK";
         p.style.color = "green";
         p.style.fontWeight = "bold";
-      </script>
-    </main>
-  </div>
+    </script>
 
-  <!-- JS APP -->
-  <script src="app.js"></script>
 </body>
 </html>

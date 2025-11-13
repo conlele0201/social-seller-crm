@@ -8,32 +8,41 @@
 </head>
 
 <body>
-  <div class="layout">
 
-    <!-- Sidebar -->
+  <div id="app">
+
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-      <h2>📒 CRM Menu</h2>
-      <ul>
-        <li>Dashboard</li>
-        <li>Customers</li>
-        <li>Orders</li>
-        <li>Products</li>
-        <li>Settings</li>
-      </ul>
+      <div class="logo">📒 Social Seller CRM</div>
+
+      <nav>
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Customers</a>
+        <a href="#">Orders</a>
+        <a href="#">Products</a>
+        <a href="#">Settings</a>
+      </nav>
     </aside>
 
-    <!-- Main Content -->
-    <main class="content">
-      <h1>Social Seller CRM – Dashboard</h1>
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <h1>Dashboard</h1>
       <p>Welcome to your CRM system.</p>
+
+      <div class="grid">
+        <div class="card">Total Customers: 0</div>
+        <div class="card">Total Orders: 0</div>
+        <div class="card">Revenue: 0₫</div>
+        <div class="card">Products: 0</div>
+      </div>
     </main>
 
   </div>
 
-  <!-- Test Inline JS -->
+  <!-- TEST inline JS -->
   <script>
     const p = document.createElement("p");
-    p.textContent = "☑ Inline JS đang chạy OK";
+    p.textContent = "☑ Inline JS chạy OK";
     p.style.color = "green";
     p.style.fontWeight = "bold";
     document.body.appendChild(p);
@@ -41,5 +50,3 @@
 
 </body>
 </html>
-
-

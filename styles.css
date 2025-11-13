@@ -8,7 +8,7 @@ body {
   background: #f4f5f7;
 }
 
-/* Layout tổng */
+/* Layout */
 #app {
   display: flex;
   height: 100vh;
@@ -39,7 +39,7 @@ body {
   margin-bottom: 5px;
 }
 
-.sidebar nav a:hover {
+sidebar nav a:hover {
   background: #1f2937;
   color: #fff;
 }
@@ -60,7 +60,7 @@ body {
   margin-top: 0;
 }
 
-/* Dashboard cards */
+/* Dashboard Cards */
 .grid {
   margin-top: 20px;
   display: grid;

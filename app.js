@@ -1,8 +1,7 @@
-// TEST BƯỚC 1: chỉ để xem app.js có chạy không
-console.log("app.js ĐÃ CHẠY");
+console.log("APP.JS ĐANG CHẠY");
 
 const p = document.createElement("p");
-p.textContent = "✅ JS trong app.js đã chạy";
-p.style.color = "lime";
+p.textContent = "🟩 app.js đã chạy";
+p.style.color = "blue";
 p.style.fontWeight = "bold";
 document.body.appendChild(p);

@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Seller CRM – Test Online</title>
-  </head>
-  <body>
-    <h1>✅ Social Seller CRM – Test Online</h1>
-    <p>This is the first page of the CRM system.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Seller CRM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <!-- gọi app.js -->
-    <script src="/app.js"></script>
-    <!-- TEST inline JS -->
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>📒 CRM Menu</h2>
+      <ul>
+        <li>Dashboard</li>
+        <li>Customers</li>
+        <li>Orders</li>
+        <li>Products</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>Social Seller CRM – Dashboard</h1>
+      <p>Welcome to your CRM system.</p>
+    </main>
+
+  </div>
+
+  <!-- Test Inline JS -->
   <script>
-    console.log("INLINE JS ĐANG CHẠY");
     const p = document.createElement("p");
-    p.textContent = "✅ Inline JS đã chạy";
+    p.textContent = "☑ Inline JS đang chạy OK";
     p.style.color = "green";
     p.style.fontWeight = "bold";
     document.body.appendChild(p);
   </script>
-  </body>
+
+</body>
 </html>
+
 

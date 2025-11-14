@@ -2,130 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Social Seller CRM</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="app">
-    <!-- Sidebar -->
+  <div class="app">
+
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="logo">
-        <span class="logo-icon">📒</span>
+      <div class="sidebar-logo">
+        <span class="icon">📒</span>
         <span class="logo-text">Social Seller CRM</span>
       </div>
 
-      <nav class="sidebar-nav">
-        <button class="sidebar-link active" data-view="dashboard">
-          Dashboard
-        </button>
-        <button class="sidebar-link" data-view="customers">
-          Customers
-        </button>
-        <button class="sidebar-link" data-view="orders">
-          Orders
-        </button>
-        <button class="sidebar-link" data-view="settings">
-          Products / Settings
-        </button>
+      <nav class="sidebar-menu">
+        <button class="menu-link active" data-view="dashboard">Dashboard</button>
+        <button class="menu-link" data-view="customers">Customers</button>
+        <button class="menu-link" data-view="orders">Orders</button>
+        <button class="menu-link" data-view="settings">Settings</button>
       </nav>
     </aside>
 
-    <!-- Main -->
+    <!-- MAIN AREA -->
     <div class="main">
-      <!-- Top navigation -->
-      <header class="topbar">
-        <nav class="topnav">
-          <button class="topnav-link active" data-view="dashboard">
-            Dashboard
-          </button>
-          <button class="topnav-link" data-view="customers">
-            Customers
-          </button>
-          <button class="topnav-link" data-view="orders">
-            Orders
-          </button>
-          <button class="topnav-link" data-view="settings">
-            Settings
-          </button>
-        </nav>
+
+      <!-- TOP NAV -->
+      <header class="topnav">
+        <div class="topnav-right">
+          <span class="topnav-status">CRM PRO</span>
+        </div>
       </header>
 
-      <!-- Content -->
+      <!-- CONTENT -->
       <main class="content">
-        <!-- VIEW: Dashboard -->
-        <section id="view-dashboard" class="view-screen">
-          <h1>Dashboard</h1>
-          <p>Welcome to your CRM system.</p>
 
-          <div class="card-grid">
+        <!-- DASHBOARD -->
+        <section id="view-dashboard" class="view active">
+          <h1>Dashboard</h1>
+
+          <div class="cards">
             <div class="card">
-              <h2>Total Customers</h2>
-              <p class="card-number" id="stat-total-customers">0</p>
+              <div class="card-title">Total Customers</div>
+              <div class="card-number" id="stat-customers">0</div>
             </div>
+
             <div class="card">
-              <h2>Total Orders</h2>
-              <p class="card-number" id="stat-total-orders">0</p>
+              <div class="card-title">Total Orders</div>
+              <div class="card-number" id="stat-orders">0</div>
             </div>
+
             <div class="card">
-              <h2>Revenue</h2>
-              <p class="card-number" id="stat-revenue">0 đ</p>
+              <div class="card-title">Revenue</div>
+              <div class="card-number" id="stat-revenue">0 đ</div>
             </div>
+
             <div class="card">
-              <h2>Products (orders count)</h2>
-              <p class="card-number" id="stat-products">0</p>
+              <div class="card-title">Products (Order Count)</div>
+              <div class="card-number" id="stat-products">0</div>
             </div>
           </div>
-
-          <p id="inline-status" style="margin-top: 16px; color: #15803d;">
-            ✅ Inline JS đang chạy OK
-          </p>
         </section>
 
-        <!-- VIEW: Customers -->
-        <section
-          id="view-customers"
-          class="view-screen"
-          style="display: none;"
-        >
+        <!-- CUSTOMERS -->
+        <section id="view-customers" class="view">
           <h1>Customers</h1>
-          <p>
-            Đây là màn Customers (tạm thời chỉ là text để test chuyển tab).
-            Bước sau mình sẽ thêm form + bảng và kết nối Supabase.
-          </p>
+          <p>Màn Customers – chuẩn bị gắn CRUD.</p>
         </section>
 
-        <!-- VIEW: Orders -->
-        <section
-          id="view-orders"
-          class="view-screen"
-          style="display: none;"
-        >
+        <!-- ORDERS -->
+        <section id="view-orders" class="view">
           <h1>Orders</h1>
-          <p>
-            Đây là màn Orders (placeholder). Bước sau sẽ gắn CRUD đơn hàng.
-          </p>
+          <p>Màn Orders – chuẩn bị gắn CRUD.</p>
         </section>
 
-        <!-- VIEW: Settings -->
-        <section
-          id="view-settings"
-          class="view-screen"
-          style="display: none;"
-        >
-          <h1>Settings / Products</h1>
-          <p>
-            Đây là màn Settings (placeholder).
-          </p>
+        <!-- SETTINGS -->
+        <section id="view-settings" class="view">
+          <h1>Settings</h1>
+          <p>Các cài đặt hệ thống.</p>
         </section>
+
       </main>
     </div>
   </div>
 
-  <!-- JS chính -->
   <script type="module" src="app.js"></script>
 </body>
 </html>
